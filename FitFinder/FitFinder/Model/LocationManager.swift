@@ -197,7 +197,7 @@ class Weathers:NSObject{
                 let index:Int = 6
                 let final = field[5].split(separator:":")
                 var result = ""
-                for n in index...(Int(final[1])!+index-1){
+                for n in index...(Int(final[1])! + index - 1){
                     let code = field[n].split(separator:":")
                     result = result + code[0] + ":"
                 }
@@ -250,7 +250,7 @@ class Weathers:NSObject{
         if datetime.suffix(2) == "PM"{
             //print(datetime.prefix(5))
             if hr < 8{
-                print(8-hr+1,"hours Left before 8 PM")
+                print(8-hr+1-1,"hours Left before 8 PM")
                 return 8-hr+1+24 //stable
             }
             else if hr == 12{
@@ -540,7 +540,10 @@ class Weathers:NSObject{
             //guard let e = Float(String(s[2])) else { return Float(o) }
             //print(type(of: e))
             //print(Float(actemp).rounded())
-            return Float(actemp).rounded()
+                
+            //return Float(actemp).rounded()
+            //open comment above in case of bugs
+            return (Float(self.getAnalyzeData(option: "AVGTEMP"))?.rounded())!
             }
             print("Check your privacy")
             return -99
@@ -614,7 +617,7 @@ class Weathers:NSObject{
         //Google Part in order to get the name of place
         
 //        //Hit the API endpoint
-        let urlString2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(lon)&key=AIzaSyCMMc1_YGKPE6hR4ZneChorSS1_dBDkCtM"
+        let urlString2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(lon)&key=AIzaSyCi2BCk8iDhH4Ot8Plzxyy-D1rIFxc6q7A"
         
         //print(urlString2)
 
@@ -638,9 +641,10 @@ class Weathers:NSObject{
                     let google = try decoder2.decode(Google.self, from: data!)
                     //print("\nGoogle Result:\n")
                     let s = google.results?.prefix(1)
-                    let result:String = (s?[0] .formatted_address)!
-                    //let e = Array(arrayLiteral: s)
-                    //print(s?[0] .formatted_address)
+                    let result:String = String((s?[0].formatted_address)!)
+                    //let result:String = s?[0].formatted_address                  //let e = Array(arrayLiteral: s)
+                    //print(String((s?[0].formatted_address)!))
+                    //print(s?[0].formatted_address as Any)
                     do{
                     try result.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
                     }
