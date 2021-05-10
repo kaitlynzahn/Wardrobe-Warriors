@@ -9,11 +9,14 @@ import SwiftUI
 import CoreData
 
 struct OutfitSubmissionSwiftUIView: View {
+    
+    // initializing custom colors
     private static let yellowColor = Color(red: 221/255, green: 184/255, blue: 106/255)
     private static let peachColor = Color(red: 228/255, green: 169/255, blue: 135/255)
     private static let blueColor = Color(red: 155/255, green: 174/255, blue: 191/255)
     private static let creamColor = Color(red: 233/255, green: 215/255, blue: 195/255)
     
+    // set weather to -99 by default
     let e = Weathers(t:-99)
     @State private var matchedTops = [ArticleOfClothing]()
     @State private var matchedBottoms = [ArticleOfClothing]()
@@ -21,62 +24,84 @@ struct OutfitSubmissionSwiftUIView: View {
     @FetchRequest(entity: ArticleOfClothing.entity(), sortDescriptors: []) var articlesOfClothing: FetchedResults<ArticleOfClothing>
     @Environment(\.managedObjectContext) private var viewContext
     
+    // initialize
     @State private var showingAlert = false
     @State private var selectedFormality: Formality = .casual
     @State private var state: MatchingState = .unmatched
     
-    var body: some View {
-        VStack {
-            if state == .matched {
-                HStack {
-                    Text("Today's Picks for \(String(Int(e.getTemp())))º")
-                        .fontWeight(.bold)
-                        .font(.largeTitle)
-                        .foregroundColor(OutfitSubmissionSwiftUIView.creamColor)
-                }
-                .padding(8)
-                ScrollView(.vertical, showsIndicators: false) {
-                    HStack {
-                        Text("Now the weather is \(e.getWeatherCode())!")
-                            .font(.title2)
-                            .fontWeight(.medium)
-                            .foregroundColor(OutfitSubmissionSwiftUIView.creamColor)
-                    }
-                    .padding(3)
-                    // can go out of bounds if not enough data
-                    ForEach(0..<matchedTops.count) { index in
-                        MatchedOutfitSwiftUIView(numberPicked: index, matchedTops[index], matchedBottoms[index]) // matchedTops[0], matchedBottoms[0]
-                    }
-                }
-            }
-            Spacer()
-        }
-        .padding(.top, -40)
-        .background(OutfitSubmissionSwiftUIView.blueColor.ignoresSafeArea(.all))
-        .onAppear {
-            if checkNewDay() {
-                showingAlert = true
-            } else {
-                showingAlert = false
-                createOutfits()
-                state = .matched
-            }
-        }
-        .alert(isPresented: $showingAlert) { () -> Alert in
-            let firstButton = Alert.Button.default(Text("Casual")) {
-                selectedFormality = .casual
-                createOutfits()
-                state = .matched
-            }
-            let secondButton = Alert.Button.default(Text("Formal")) {
-                selectedFormality = .formal
-                createOutfits()
-                state = .matched
-            }
-            return Alert(title: Text("What kind of outfits are you looking for?"), primaryButton: firstButton, secondaryButton: secondButton)
-        }
-    }
     
+    
+    // view
+    var body: some View {
+        HStack {
+            // for spacing
+            Spacer()
+            VStack {
+                if state == .matched {
+                    // title saying today's picks
+                    HStack {
+                        Spacer()
+                        Text("Today's Picks for \(String(Int(e.getTemp())))º")
+                            .font(.custom("Sunday Morning", size: 38))
+                            .fontWeight(.bold)
+                            .font(.largeTitle)
+                            .foregroundColor(OutfitSubmissionSwiftUIView.creamColor)
+                            .padding(.top, 50)
+                        Spacer()
+                    } // HStack
+//                    .padding(8)
+                    
+                    // title saying the weather- might need this ScrollView back
+                    //ScrollView(.vertical, showsIndicators: false) {
+                        HStack {
+                            Text("Now the weather is \(e.getWeatherCode())!")
+                                .font(.custom("Sunday Morning", size: 30))
+                                .font(.title2)
+                                .fontWeight(.medium)
+                                .foregroundColor(OutfitSubmissionSwiftUIView.creamColor)
+                        } // HStack
+//                        .padding(3)
+                        // can go out of bounds if not enough data
+                        ForEach(0..<matchedTops.count) { index in
+                            MatchedOutfitSwiftUIView(numberPicked: index, matchedTops[index], matchedBottoms[index]) // matchedTops[0], matchedBottoms[0]
+                        } // ForEach
+                    //} // ScrollView
+                } // if
+                Spacer()
+            } // VStack
+//            .padding(.top, -40)
+            .background(OutfitSubmissionSwiftUIView.blueColor.ignoresSafeArea(.all))
+            .onAppear {
+                if checkNewDay() {
+                    showingAlert = true
+                } else {
+                    showingAlert = false
+                    createOutfits()
+                    state = .matched
+                }
+            } // onAppear
+            // alert for the user
+            .alert(isPresented: $showingAlert) { () -> Alert in
+                let firstButton = Alert.Button.default(Text("Casual")) {
+                    selectedFormality = .casual
+                    createOutfits()
+                    state = .matched
+                }
+                let secondButton = Alert.Button.default(Text("Formal")) {
+                    selectedFormality = .formal
+                    createOutfits()
+                    state = .matched
+                }
+                return Alert(title: Text("What kind of outfits are you looking for?"), primaryButton: firstButton, secondaryButton: secondButton)
+            } // alert
+            Spacer()
+            
+        } // HStack (entire age)
+    } // end view
+    
+    
+    
+    // function to createOutfits
     func createOutfits() {
         var matchedOutfits: Int16 = 1
         var consideredClothes = [ArticleOfClothing]()
@@ -240,6 +265,9 @@ struct OutfitSubmissionSwiftUIView: View {
         //      }
     }
     
+    
+    
+    // function to match complementary colors
     func matchComplementaryColors(inputColor: Colors, consideredBottoms: [ArticleOfClothing]) -> Int {
         switch inputColor {
         case .red:
@@ -335,6 +363,8 @@ struct OutfitSubmissionSwiftUIView: View {
     }
 
     
+    
+    // function to check new day
     func checkNewDay() -> Bool {
         let defaults = UserDefaults.standard
         let savedDate = defaults.object(forKey: "LastRun") as? Date
@@ -351,6 +381,8 @@ struct OutfitSubmissionSwiftUIView: View {
     }
 
 }
+
+
 
 struct OutfitSubmissionSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {

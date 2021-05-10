@@ -7,7 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C18BBF226222654008CE6C0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C18BBF126222654008CE6C0 /* Weather.swift */; };
+		7C50704B2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50704A2636631400E2C24F /* FRANKY TOYS RUS.otf */; };
+		7C50704C2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50704A2636631400E2C24F /* FRANKY TOYS RUS.otf */; };
+		7C50704D2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50704A2636631400E2C24F /* FRANKY TOYS RUS.otf */; };
+		7C5070522636651700E2C24F /* Januar.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070512636651700E2C24F /* Januar.otf */; };
+		7C5070532636651700E2C24F /* Januar.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070512636651700E2C24F /* Januar.otf */; };
+		7C5070542636651700E2C24F /* Januar.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070512636651700E2C24F /* Januar.otf */; };
+		7C50705C2636664200E2C24F /* Aloja-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50705B2636664200E2C24F /* Aloja-Light.otf */; };
+		7C50705D2636664200E2C24F /* Aloja-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50705B2636664200E2C24F /* Aloja-Light.otf */; };
+		7C50705E2636664200E2C24F /* Aloja-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50705B2636664200E2C24F /* Aloja-Light.otf */; };
+		7C50706A263667C500E2C24F /* Bubblegum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C507069263667C500E2C24F /* Bubblegum.ttf */; };
+		7C50706B263667C500E2C24F /* Bubblegum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C507069263667C500E2C24F /* Bubblegum.ttf */; };
+		7C50706C263667C500E2C24F /* Bubblegum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C507069263667C500E2C24F /* Bubblegum.ttf */; };
+		7C5070742636689C00E2C24F /* balloons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070732636689C00E2C24F /* balloons.ttf */; };
+		7C5070752636689C00E2C24F /* balloons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070732636689C00E2C24F /* balloons.ttf */; };
+		7C5070762636689C00E2C24F /* balloons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070732636689C00E2C24F /* balloons.ttf */; };
+		7C50707E263668A700E2C24F /* Bunny Baby.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50707D263668A700E2C24F /* Bunny Baby.otf */; };
+		7C50707F263668A700E2C24F /* Bunny Baby.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50707D263668A700E2C24F /* Bunny Baby.otf */; };
+		7C507080263668A700E2C24F /* Bunny Baby.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50707D263668A700E2C24F /* Bunny Baby.otf */; };
+		7C5070882636696700E2C24F /* ARCO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070872636696700E2C24F /* ARCO.ttf */; };
+		7C5070892636696700E2C24F /* ARCO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070872636696700E2C24F /* ARCO.ttf */; };
+		7C50708A2636696700E2C24F /* ARCO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070872636696700E2C24F /* ARCO.ttf */; };
+		7C5070922636697300E2C24F /* FB-Strawberry.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070912636697300E2C24F /* FB-Strawberry.ttf */; };
+		7C5070932636697300E2C24F /* FB-Strawberry.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070912636697300E2C24F /* FB-Strawberry.ttf */; };
+		7C5070942636697300E2C24F /* FB-Strawberry.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5070912636697300E2C24F /* FB-Strawberry.ttf */; };
+		7C50709C2636697F00E2C24F /* Sunday Morning.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50709B2636697F00E2C24F /* Sunday Morning.otf */; };
+		7C50709D2636697F00E2C24F /* Sunday Morning.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50709B2636697F00E2C24F /* Sunday Morning.otf */; };
+		7C50709E2636697F00E2C24F /* Sunday Morning.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C50709B2636697F00E2C24F /* Sunday Morning.otf */; };
 		8C05E3F525E484FA0020AF41 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05E3F425E484FA0020AF41 /* Colors.swift */; };
 		8C05E41625E5CA730020AF41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05E41525E5CA730020AF41 /* Extensions.swift */; };
 		8C801D27261D3E73001D3D2B /* ArticleOfClothing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C801D25261D3E73001D3D2B /* ArticleOfClothing+CoreDataClass.swift */; };
@@ -64,7 +90,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C18BBF126222654008CE6C0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7C50704A2636631400E2C24F /* FRANKY TOYS RUS.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FRANKY TOYS RUS.otf"; sourceTree = "<group>"; };
+		7C5070512636651700E2C24F /* Januar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Januar.otf; sourceTree = "<group>"; };
+		7C50705B2636664200E2C24F /* Aloja-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Aloja-Light.otf"; path = "../../../../../../../Downloads/Aloja-Free-Font/Aloja-Light.otf"; sourceTree = "<group>"; };
+		7C5070652636664500E2C24F /* Aloja-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aloja-Light.otf"; sourceTree = "<group>"; };
+		7C507069263667C500E2C24F /* Bubblegum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bubblegum.ttf; path = ../../../../../../../../Downloads/bubblegum/Bubblegum.ttf; sourceTree = "<group>"; };
+		7C5070732636689C00E2C24F /* balloons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = balloons.ttf; path = ../../../../../../../../Downloads/balloons.ttf; sourceTree = "<group>"; };
+		7C50707D263668A700E2C24F /* Bunny Baby.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bunny Baby.otf"; path = "../../../../../../../../Downloads/bunny_baby/Bunny Baby.otf"; sourceTree = "<group>"; };
+		7C5070872636696700E2C24F /* ARCO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ARCO.ttf; path = ../../../../../../../../Downloads/arco/ARCO.ttf; sourceTree = "<group>"; };
+		7C5070912636697300E2C24F /* FB-Strawberry.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FB-Strawberry.ttf"; path = "../../../../../../../../Downloads/FB-Strawberry.ttf"; sourceTree = "<group>"; };
+		7C50709B2636697F00E2C24F /* Sunday Morning.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sunday Morning.otf"; path = "../../../../../../../../Downloads/sunday_morning_3/Sunday Morning.otf"; sourceTree = "<group>"; };
 		8C05E3F425E484FA0020AF41 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8C05E3FB25E5BD660020AF41 /* FitFinderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitFinderModel.xcdatamodel; sourceTree = "<group>"; };
 		8C05E41525E5CA730020AF41 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -134,6 +169,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C507049263662F400E2C24F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7C5070732636689C00E2C24F /* balloons.ttf */,
+				7C50707D263668A700E2C24F /* Bunny Baby.otf */,
+				7C507069263667C500E2C24F /* Bubblegum.ttf */,
+				7C5070652636664500E2C24F /* Aloja-Light.otf */,
+				7C5070872636696700E2C24F /* ARCO.ttf */,
+				7C5070912636697300E2C24F /* FB-Strawberry.ttf */,
+				7C50709B2636697F00E2C24F /* Sunday Morning.otf */,
+				7C5070512636651700E2C24F /* Januar.otf */,
+				7C50704A2636631400E2C24F /* FRANKY TOYS RUS.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8C05E3BE25E449970020AF41 /* OutfitSubmissionPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +272,8 @@
 		8CE4D8F625DB46F1005BF8FA /* FitFinder */ = {
 			isa = PBXGroup;
 			children = (
+				7C50705B2636664200E2C24F /* Aloja-Light.otf */,
+				7C507049263662F400E2C24F /* Fonts */,
 				8C80280425F863E500DB16C7 /* View */,
 				8C05E3EB25E480F00020AF41 /* Model */,
 				8CE4D92B25DB489B005BF8FA /* PlaceHolderAssets */,
@@ -398,16 +451,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CE4D93725DB48B8005BF8FA /* tshirt3.jpg in Resources */,
+				7C50704B2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */,
+				7C5070882636696700E2C24F /* ARCO.ttf in Resources */,
+				7C5070522636651700E2C24F /* Januar.otf in Resources */,
 				8CE4D93C25DB48B8005BF8FA /* longsleeve.jpg in Resources */,
+				7C5070742636689C00E2C24F /* balloons.ttf in Resources */,
 				8CE4D94025DB48B8005BF8FA /* pants.jpg in Resources */,
 				8CE4D8FF25DB46F3005BF8FA /* Preview Assets.xcassets in Resources */,
 				8CE4D93825DB48B8005BF8FA /* tshirt2.jpg in Resources */,
 				8CE4D93A25DB48B8005BF8FA /* summerOutfit.jpg in Resources */,
+				7C50705C2636664200E2C24F /* Aloja-Light.otf in Resources */,
 				8CE4D93D25DB48B8005BF8FA /* longsleeve3.jpg in Resources */,
 				8CE4D93E25DB48B8005BF8FA /* longsleeve2.jpg in Resources */,
 				8CE4D93B25DB48B8005BF8FA /* sweatpants.jpg in Resources */,
+				7C50707E263668A700E2C24F /* Bunny Baby.otf in Resources */,
+				7C5070922636697300E2C24F /* FB-Strawberry.ttf in Resources */,
 				8CE4D8FC25DB46F3005BF8FA /* Assets.xcassets in Resources */,
 				8CE4D93925DB48B8005BF8FA /* yellowpants.jpg in Resources */,
+				7C50706A263667C500E2C24F /* Bubblegum.ttf in Resources */,
+				7C50709C2636697F00E2C24F /* Sunday Morning.otf in Resources */,
 				8CE4D93F25DB48B8005BF8FA /* tshirt.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +478,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5070752636689C00E2C24F /* balloons.ttf in Resources */,
+				7C50709D2636697F00E2C24F /* Sunday Morning.otf in Resources */,
+				7C5070892636696700E2C24F /* ARCO.ttf in Resources */,
+				7C50707F263668A700E2C24F /* Bunny Baby.otf in Resources */,
+				7C5070532636651700E2C24F /* Januar.otf in Resources */,
+				7C50704C2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */,
+				7C50706B263667C500E2C24F /* Bubblegum.ttf in Resources */,
+				7C50705D2636664200E2C24F /* Aloja-Light.otf in Resources */,
+				7C5070932636697300E2C24F /* FB-Strawberry.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +494,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5070762636689C00E2C24F /* balloons.ttf in Resources */,
+				7C50709E2636697F00E2C24F /* Sunday Morning.otf in Resources */,
+				7C50708A2636696700E2C24F /* ARCO.ttf in Resources */,
+				7C507080263668A700E2C24F /* Bunny Baby.otf in Resources */,
+				7C5070542636651700E2C24F /* Januar.otf in Resources */,
+				7C50704D2636631400E2C24F /* FRANKY TOYS RUS.otf in Resources */,
+				7C50706C263667C500E2C24F /* Bubblegum.ttf in Resources */,
+				7C50705E2636664200E2C24F /* Aloja-Light.otf in Resources */,
+				7C5070942636697300E2C24F /* FB-Strawberry.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
