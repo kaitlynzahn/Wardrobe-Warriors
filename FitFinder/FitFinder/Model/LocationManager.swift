@@ -8,6 +8,7 @@
 import SwiftUI
 import Foundation
 import CoreLocation
+import Foundation
 
 class LocationManager:  NSObject, ObservableObject, CLLocationManagerDelegate{
     
@@ -489,7 +490,7 @@ class Weathers:NSObject{
             let s = savedString.split(separator: "\n", omittingEmptySubsequences: false)
             //print(s.count)
             if s.count > 1{
-                return String(s[9])
+                return String(s[9]).replacingOccurrences(of: "_", with: " ")
             }
             return df
          }

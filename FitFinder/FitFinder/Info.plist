@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sunday Morning.otf</string>
+		<string>FB-Strawberry.ttf</string>
+		<string>ARCO.ttf</string>
+		<string>Bunny Baby.otf</string>
+		<string>balloons.ttf</string>
+		<string>Bubblegum.ttf</string>
+		<string>Aloja-Light.otf</string>
+		<string>Januar.otf</string>
+		<string>FRANKY TOYS RUS.otf</string>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
