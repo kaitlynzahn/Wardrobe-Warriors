@@ -67,8 +67,19 @@ struct ClothingSubmissionSwiftUIView: View {
     
     // code for the view
     var body: some View {
-//        NavigationView {
+        NavigationView {
             VStack {
+                
+//                VStack {
+//                    Text("Save")
+//                        .font(.largeTitle)
+//                        .padding(100)
+//                        .padding(.top, 0)
+//                    NavigationLink(destination: OutfitSubmissionSwiftUIView() ) {
+//                        Text("Save")
+//                    }
+//                }
+                
                 // HStack to get width
                 HStack {
                     // title
@@ -205,11 +216,11 @@ struct ClothingSubmissionSwiftUIView: View {
                 ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
             } // sheet
             .padding(.top, -100)
-//        } // NavigationView (entire page)
-//        .navigationBarItems(trailing: Button("Save") {
-//            addArticleOfClothing()
-//            self.mode.wrappedValue.dismiss()
-//        }) // navigationBarItema
+        } // NavigationView (entire page)
+        .navigationBarItems(trailing: Button("Save") {
+            addArticleOfClothing()
+            self.mode.wrappedValue.dismiss()
+        }) // navigationBarItema
         .onAppear { checkForExistingArticleOfClothing() }
     }
     
