@@ -10,6 +10,7 @@ import CoreData
 
 struct WardrobeNavigationSwiftUIView: View {
     let locationmanager = LocationManager()
+    
     @FetchRequest(entity: ArticleOfClothing.entity(), sortDescriptors: []) var articlesOfClothing: FetchedResults<ArticleOfClothing>
     
     var body: some View {
@@ -20,8 +21,6 @@ struct WardrobeNavigationSwiftUIView: View {
         let blueColor = Color(red: 155/255, green: 174/255, blue: 191/255)
         let creamColor = Color(red: 233/255, green: 215/255, blue: 195/255)
         
-        
-        
         NavigationView {
             VStack {
                 // HStack to get width
@@ -31,7 +30,7 @@ struct WardrobeNavigationSwiftUIView: View {
                         .font(.custom("Sunday Morning", size: 38))
                         .fontWeight(.bold)
                         .font(.largeTitle)
-                        .foregroundColor(creamColor)
+                        .foregroundColor(FitFinderColors.creamColor.color)
                 }
                 .padding(8)
                 .padding(.top, -30)
@@ -317,7 +316,7 @@ struct WardrobeNavigationSwiftUIView: View {
                 Spacer()
             } // VStack (entire page)
             .padding(.top, -30)
-            .background(blueColor.ignoresSafeArea(.all))
+            .background(FitFinderColors.blueColor.color.ignoresSafeArea(.all))
 //            .onAppear { clearMatchedOutfits() }
 //            .navigationBarItems(leading:
 //                                    NavigationLink(destination: OutfitSubmissionSwiftUIView()) {

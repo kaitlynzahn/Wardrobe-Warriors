@@ -47,14 +47,13 @@ struct ClothingSubmissionSwiftUIView: View {
         existingArticleOfClothing = nil
         
         //this changes the "thumb" that selects between items
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(ClothingSubmissionSwiftUIView.peachColor)
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(FitFinderColors.peachColor.color)
         //and this changes the color for the whole "bar" background
-        UISegmentedControl.appearance().backgroundColor = UIColor(ClothingSubmissionSwiftUIView.creamColor)
+        UISegmentedControl.appearance().backgroundColor = UIColor(FitFinderColors.creamColor.color)
 
         //these lines change the text color for various states
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor(ClothingSubmissionSwiftUIView.creamColor)], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor(ClothingSubmissionSwiftUIView.blueColor)], for: .normal)
-        
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor(FitFinderColors.creamColor.color)], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor(FitFinderColors.blueColor.color)], for: .normal)
     }
     
     
@@ -210,8 +209,8 @@ struct ClothingSubmissionSwiftUIView: View {
                 .padding(.top, -30)
                 Spacer()
                 
-            } // VStack (entire view)
-            .background(ClothingSubmissionSwiftUIView.blueColor.ignoresSafeArea(.all))
+            } // whatever ends here
+            .background(FitFinderColors.blueColor.color.ignoresSafeArea(.all))
             .sheet(isPresented: self.$isImagePickerDisplay) {
                 ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
             } // sheet

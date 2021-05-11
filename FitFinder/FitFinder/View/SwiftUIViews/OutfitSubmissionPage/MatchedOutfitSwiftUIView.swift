@@ -51,7 +51,7 @@ struct MatchedOutfitSwiftUIView: View {
         HStack {
             Text("   " + headlineText)
                 .font(.title)
-                .foregroundColor(MatchedOutfitSwiftUIView.peachColor)
+                .foregroundColor(FitFinderColors.peachColor.color)
                 .padding(3)
                 .background(
                     RoundedRectangle(
