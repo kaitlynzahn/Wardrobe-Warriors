@@ -20,8 +20,8 @@ struct ContentView: View {
     let peachColor = Color(red: 228/255, green: 169/255, blue: 135/255)
     
     init() {
-        UITabBar.appearance().barTintColor = UIColor(creamColor)
-        UITabBar.appearance().selectedImageTintColor = UIColor(peachColor)
+        UITabBar.appearance().barTintColor = UIColor(peachColor)
+        UITabBar.appearance().selectedImageTintColor = UIColor(creamColor)
         //qqUITabBar.appearance().unselectedItemTintColor = UIColor.red
     }
 
@@ -29,7 +29,9 @@ struct ContentView: View {
         TabView(selection: $selectedView) {
             
             // page content
-            OutfitSubmissionSwiftUIView()
+            NavigationView {
+                OutfitSubmissionSwiftUIView()
+            }
             // explains what tab item it is
             .tabItem {
                 Label("Today's Picks", systemImage: "calendar")
@@ -37,21 +39,27 @@ struct ContentView: View {
             // sets the tag
             .tag(1)
 
-//            Button("Show First View") {
-//                selectedView = 1
-//            }
-//            .padding()
-            WardrobeNavigationSwiftUIView()
-            .tabItem {
-                Label("My Closet", systemImage: "bag")
-            }
-            .tag(2)
             
 //            Button("Show First View") {
 //                selectedView = 1
 //            }
 //            .padding()
-            ClothingSubmissionSwiftUIView()
+            NavigationView {
+                WardrobeNavigationSwiftUIView()
+            }
+            .tabItem {
+                Label("My Closet", systemImage: "bag")
+            }
+            .tag(2)
+            
+            
+//            Button("Show First View") {
+//                selectedView = 1
+//            }
+//            .padding()
+            NavigationView {
+                ClothingSubmissionSwiftUIView()
+            }
             .tabItem {
                 Label("Add Clothes", systemImage: "plus.circle")
             }

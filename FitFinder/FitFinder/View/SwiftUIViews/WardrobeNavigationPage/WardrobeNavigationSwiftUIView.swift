@@ -33,7 +33,7 @@ struct WardrobeNavigationSwiftUIView: View {
                         .foregroundColor(FitFinderColors.creamColor.color)
                 }
                 .padding(8)
-                .padding(.top, -30)
+                //.padding(.top, -150)
                 
                 // title doesn't scroll, but page does
                 ScrollView(.vertical, showsIndicators: false) {

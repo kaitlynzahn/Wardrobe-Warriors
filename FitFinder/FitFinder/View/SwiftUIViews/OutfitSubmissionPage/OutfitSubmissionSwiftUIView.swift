@@ -97,28 +97,30 @@ struct OutfitSubmissionSwiftUIView: View {
             } // alert
             Spacer()
             
+// when I was merging I didn't know what to do with this section- I don't remember deleting the alert but maybe I did, if so add this back in
 //        } // HStack (entire age)
 //    } // end view
     
-        }
+// and delete from here
+        } // HStack
         .padding(.top, -40)
         .onAppear {
             showingAlert = true
-        }
+        } // onAppear
         .alert(isPresented: $showingAlert) { () -> Alert in
             let firstButton = Alert.Button.default(Text("Casual")) {
                 selectedFormality = .casual
                 createOutfits()
-            }
+            } // let
             let secondButton = Alert.Button.default(Text("Formal")) {
                 selectedFormality = .formal
                 createOutfits()
-            }
+            } // let
             return Alert(title: Text("What kind of outfits are you looking for?"), primaryButton: firstButton, secondaryButton: secondButton)
-        }
+        } // alert
         .background(FitFinderColors.blueColor.color.ignoresSafeArea(.all))
-    }
-    
+    } // end view
+// to here
     
     // function to createOutfits
     func createOutfits() {
